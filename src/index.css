@@ -1,0 +1,693 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🎯 ANIMATIONS FLUIDES JUTRANS */
+@layer base {
+  * {
+    @apply transition-colors duration-200;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-gradient-to-br from-base-200 via-base-100 to-base-200;
+  }
+
+  /* Animation de changement de langue */
+  .language-changed * {
+    animation: language-fade 0.5s ease-out;
+  }
+}
+
+/* 🎯 COMPOSANTS PERSONNALISÉS JUTRANS */
+@layer components {
+  /* Animations d'entrée fluides */
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out forwards;
+  }
+
+  .animate-slide-down {
+    animation: slideDown 0.3s ease-out forwards;
+  }
+  
+  /* Hover effects fluides */
+  .hover-lift {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .hover-lift:hover {
+    @apply transform -translate-y-2 shadow-xl;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  
+  .hover-glow:hover {
+    @apply shadow-lg shadow-primary/25;
+  }
+  
+  /* Cards avec animations */
+  .card-animated {
+    @apply card shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+  }
+  
+  .card-gradient {
+    @apply bg-gradient-to-br from-base-100 to-base-200 border border-base-300/50;
+  }
+  
+  /* Boutons fluides */
+  .btn-fluid {
+    @apply transition-all duration-200 ease-out transform active:scale-95;
+  }
+  
+  .btn-fluid:hover {
+    @apply shadow-lg;
+  }
+  
+  /* Navigation fluide */
+  .nav-item {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .nav-item:hover {
+    @apply transform translate-x-1;
+  }
+  
+  /* Tableaux fluides */
+  .table-fluid tbody tr {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .table-fluid tbody tr:hover {
+    @apply bg-primary/5 transform scale-[1.01];
+  }
+  
+  /* Inputs fluides */
+  .input-fluid {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .input-fluid:focus {
+    @apply transform scale-105 shadow-lg;
+  }
+  
+  /* Modals fluides */
+  .modal-fluid {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .modal-fluid.modal-open {
+    animation: modalFadeIn 0.3s ease-out forwards;
+  }
+  
+  /* Dropdowns fluides */
+  .dropdown-fluid .dropdown-content {
+    @apply transition-all duration-200 ease-out transform origin-top;
+  }
+  
+  .dropdown-fluid:hover .dropdown-content {
+    @apply scale-100 opacity-100;
+  }
+  
+  /* Loading states fluides */
+  .loading-fluid {
+    @apply animate-pulse;
+  }
+  
+  /* Gradients JUTRANS */
+  .gradient-jutrans {
+    @apply bg-gradient-to-r from-blue-600 via-blue-700 to-blue-800;
+  }
+  
+  .gradient-jutrans-light {
+    @apply bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200;
+  }
+  
+  /* Shadows fluides */
+  .shadow-fluid {
+    @apply shadow-lg transition-shadow duration-300;
+  }
+  
+  .shadow-fluid:hover {
+    @apply shadow-2xl shadow-primary/20;
+  }
+  
+  /* Text animations */
+  .text-shimmer {
+    background: linear-gradient(90deg, #374151 25%, #6b7280 50%, #374151 75%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Progress bars fluides */
+  .progress-fluid {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  /* Badges fluides */
+  .badge-fluid {
+    @apply transition-all duration-200 ease-out transform hover:scale-110;
+  }
+  
+  /* Stats cards fluides */
+  .stat-fluid {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .stat-fluid:hover {
+    @apply transform scale-105;
+  }
+  
+  /* Tabs fluides */
+  .tabs-fluid .tab {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .tabs-fluid .tab:hover {
+    @apply transform -translate-y-1;
+  }
+  
+  /* Alerts fluides */
+  .alert-fluid {
+    @apply transition-all duration-300 ease-out;
+    animation: slideInDown 0.5s ease-out forwards;
+  }
+  
+  /* Tooltips fluides */
+  .tooltip-fluid {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  /* Breadcrumbs fluides */
+  .breadcrumbs-fluid li {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .breadcrumbs-fluid li:hover {
+    @apply transform scale-105;
+  }
+  
+  /* Pagination fluide */
+  .pagination-fluid .join-item {
+    @apply transition-all duration-200 ease-out;
+  }
+  
+  .pagination-fluid .join-item:hover {
+    @apply transform scale-110;
+  }
+  
+  /* Collapse fluide */
+  .collapse-fluid {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  /* Carousel fluide */
+  .carousel-fluid {
+    @apply transition-all duration-500 ease-out;
+  }
+  
+  /* Steps fluides */
+  .steps-fluid .step {
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .steps-fluid .step:hover {
+    @apply transform scale-110;
+  }
+
+  /* Animation de changement de langue */
+  .language-selector-active {
+    @apply ring-2 ring-primary ring-offset-2;
+    animation: pulse 1s infinite;
+  }
+}
+
+/* 🎯 KEYFRAMES POUR ANIMATIONS JUTRANS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes language-fade {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* 🎯 RESPONSIVE FLUIDE */
+@media (max-width: 768px) {
+  .card-animated {
+    @apply hover:transform-none hover:shadow-lg;
+  }
+  
+  .hover-lift:hover {
+    @apply transform-none;
+  }
+  
+  /* Réduire la taille des éléments sur mobile */
+  .text-2xl {
+    font-size: 1.25rem;
+  }
+  
+  .text-xl {
+    font-size: 1.125rem;
+  }
+  
+  .text-lg {
+    font-size: 1rem;
+  }
+  
+  /* Ajuster les espacements sur mobile */
+  .p-6 {
+    padding: 1rem;
+  }
+  
+  .gap-6 {
+    gap: 0.75rem;
+  }
+  
+  /* Ajuster les cartes sur mobile */
+  .card-body {
+    padding: 1rem;
+  }
+  
+  /* Améliorer la lisibilité des tableaux sur mobile */
+  .table {
+    font-size: 0.75rem;
+  }
+  
+  /* Ajuster les boutons sur mobile */
+  .btn {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* 🎯 DARK MODE SUPPORT */
+@media (prefers-color-scheme: dark) {
+  .text-shimmer {
+    background: linear-gradient(90deg, #e5e7eb 25%, #f3f4f6 50%, #e5e7eb 75%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* 🎯 PRINT STYLES */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .card {
+    @apply shadow-none border border-gray-300;
+  }
+  
+  .btn {
+    @apply shadow-none;
+  }
+}
+
+/* 🎯 ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 🎯 HIGH CONTRAST MODE */
+@media (prefers-contrast: high) {
+  .card {
+    @apply border-2 border-gray-900;
+  }
+  
+  .btn {
+    @apply border-2;
+  }
+}
+
+/* 🎯 FOCUS STYLES AMÉLIORÉS */
+.focus-visible:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-base-100;
+}
+
+/* 🎯 SCROLLBAR PERSONNALISÉE */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-base-200;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/30 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary/50;
+}
+
+/* 🎯 SELECTION PERSONNALISÉE */
+::selection {
+  @apply bg-primary/20 text-primary-content;
+}
+
+/* 🎯 PLACEHOLDER STYLES */
+::placeholder {
+  @apply text-base-content/50;
+}
+
+/* 🎯 UTILITIES JUTRANS */
+.jutrans-brand {
+  @apply text-blue-600 font-bold;
+}
+
+.jutrans-gradient {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 50%, #1e40af 100%);
+}
+
+.jutrans-shadow {
+  box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.1), 0 10px 10px -5px rgba(37, 99, 235, 0.04);
+}
+
+.jutrans-glow {
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+}
+
+/* 🎯 LOADING STATES AVANCÉS */
+.skeleton {
+  @apply animate-pulse bg-gradient-to-r from-base-300 via-base-200 to-base-300;
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* 🎯 MICRO-INTERACTIONS */
+.micro-bounce {
+  @apply transition-transform duration-150 ease-out;
+}
+
+.micro-bounce:active {
+  @apply transform scale-95;
+}
+
+.micro-shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* 🎯 ÉTATS DE CHARGEMENT CONTEXTUELS */
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: ''; }
+  40% { content: '.'; }
+  60% { content: '..'; }
+  80%, 100% { content: '...'; }
+}
+
+/* Animation spécifique pour le changement de langue */
+.language-switch-animation {
+  animation: languageSwitchPulse 0.5s ease-out;
+}
+
+@keyframes languageSwitchPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Tooltip pour le sélecteur de langue */
+.language-tooltip {
+  @apply absolute z-50 px-2 py-1 text-xs text-white bg-black/80 rounded shadow-lg;
+  animation: tooltipFadeIn 0.3s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fix for language selector dropdown */
+.dropdown-content {
+  z-index: 100;
+}
+
+/* Ensure language selector dropdown is above other elements */
+.language-selector .absolute {
+  z-index: 9999 !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 640px) {
+  .hero-content {
+    padding: 1rem;
+  }
+  
+  .stats {
+    flex-direction: column;
+  }
+  
+  .stats-horizontal {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .stats-horizontal .stat {
+    flex: 1 1 50%;
+    min-width: 120px;
+  }
+  
+  .grid-cols-3, 
+  .grid-cols-4, 
+  .grid-cols-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .tabs-boxed {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .tabs-boxed .tab {
+    margin: 0.125rem;
+    flex: 0 1 auto;
+  }
+  
+  .card-title {
+    font-size: 1.125rem;
+  }
+  
+  .stat-value {
+    font-size: 1.25rem;
+  }
+  
+  .stat-title {
+    font-size: 0.75rem;
+  }
+  
+  .stat-desc {
+    font-size: 0.7rem;
+  }
+}
+
+/* Improve mobile menu */
+@media (max-width: 768px) {
+  .modal-box {
+    max-width: 90vw;
+    padding: 1rem;
+  }
+  
+  .dropdown-content {
+    min-width: 200px;
+    right: -50px;
+  }
+}

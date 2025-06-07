@@ -1,0 +1,344 @@
+{
+  "common": {
+    "loading": "Loading data...",
+    "error": "Loading error",
+    "retry": "Retry",
+    "export": "Export",
+    "refresh": "Refresh",
+    "year": "Year",
+    "total": "Total",
+    "average": "Average",
+    "percentage": "Percentage",
+    "employees": "employees",
+    "employee": "employee",
+    "save": "Save",
+    "cancel": "Cancel",
+    "close": "Close",
+    "create": "Create",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "actions": "Actions",
+    "confirm": "Confirm",
+    "success": "Success",
+    "warning": "Warning",
+    "error": "Error",
+    "yes": "Yes",
+    "no": "No"
+  },
+  "gender": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "employees": "Employee List",
+    "demographics": "Demographics",
+    "tenure": "Tenure Analysis",
+    "organization": "Organization",
+    "recruitment": "Recruitment",
+    "comparison": "Year Comparison",
+    "risks": "Risk Analysis"
+  },
+  "dashboard": {
+    "title": "HR Dashboard",
+    "subtitle": "Data for year {{year}}",
+    "kpis": {
+      "totalEmployees": "Total Employees",
+      "totalEmployeesDesc": "Total number of employees",
+      "avgAge": "Average Age",
+      "avgAgeDesc": "Average age of employees",
+      "avgTenure": "Average Tenure",
+      "avgTenureDesc": "Average tenure",
+      "newHires": "New Hires",
+      "newHiresDesc": "New hires this year",
+      "nearRetirement": "Near Retirement",
+      "nearRetirementDesc": "Employees close to retirement",
+      "temporaryContracts": "Fixed-term Contracts",
+      "temporaryContractsDesc": "Number of fixed-term contracts",
+      "expiredContracts": "Expired Contracts",
+      "expiredContractsDesc": "Fixed-term contracts that have expired"
+    },
+    "charts": {
+      "genderDistribution": "Gender Distribution",
+      "agePyramid": "Age Pyramid",
+      "positionDistribution": "Position Distribution",
+      "tenureDistribution": "Tenure Distribution",
+      "contractDistribution": "Contract Type Distribution",
+      "male": "Male",
+      "female": "Female",
+      "numberOfEmployees": "Number of employees",
+      "ageGroups": "Age groups (years)",
+      "tenureGroups": "Tenure groups (years)",
+      "topPositions": "{{count}} of {{total}} positions shown",
+      "showingTop": "Showing top {{count}} most common positions"
+    },
+    "footer": {
+      "lastUpdated": "Data updated on {{date}} at {{time}}",
+      "copyright": "© {{year}} HR Dashboard - All rights reserved"
+    }
+  },
+  "employees": {
+    "title": "Employee Management",
+    "subtitle": "Employee management and consultation for {{year}}",
+    "filters": {
+      "search": "Search...",
+      "gender": "Gender",
+      "ageGroup": "Age Group",
+      "tenureGroup": "Tenure",
+      "position": "Position",
+      "nationality": "Nationality",
+      "affectation": "Assignment",
+      "contractType": "Contract Type",
+      "contractStatus": "Contract Status",
+      "clearAll": "Clear all filters"
+    },
+    "table": {
+      "name": "Name",
+      "gender": "Gender",
+      "age": "Age",
+      "tenure": "Tenure",
+      "position": "Position",
+      "nationality": "Nationality",
+      "affectation": "Assignment",
+      "hireDate": "Hire Date",
+      "endDate": "End Date",
+      "status": "Status",
+      "actions": "Actions"
+    },
+    "stats": {
+      "total": "Total",
+      "averageAge": "Average Age",
+      "averageTenure": "Average Tenure",
+      "uniquePositions": "Unique Positions",
+      "permanentContracts": "Permanent",
+      "temporaryContracts": "Fixed-term",
+      "expiredContracts": "Expired Contracts"
+    },
+    "crud": {
+      "newEmployee": "New Employee",
+      "editEmployee": "Edit Employee",
+      "viewEmployee": "Employee Details",
+      "deleteEmployee": "Delete Employee",
+      "deleteConfirmation": "Are you sure you want to delete employee {{name}}?",
+      "deleteWarning": "This action cannot be undone.",
+      "createSuccess": "Employee created successfully",
+      "updateSuccess": "Employee updated successfully",
+      "deleteSuccess": "Employee deleted successfully",
+      "refreshSuccess": "Data refreshed successfully",
+      "error": "An error occurred"
+    },
+    "form": {
+      "personalInfo": "Personal Information",
+      "contractInfo": "Contract Information",
+      "professionalInfo": "Professional Information",
+      "calculatedInfo": "Calculated Information",
+      "fullName": "Full Name",
+      "gender": "Gender",
+      "nationality": "Nationality",
+      "birthDate": "Birth Date",
+      "hireDate": "Hire Date",
+      "endDate": "End Date",
+      "endDateOptional": "(optional - permanent if empty)",
+      "salary": "Salary",
+      "position": "Position",
+      "affectation": "Assignment",
+      "contactPerson": "Contact Person",
+      "contractType": "Contract Type",
+      "permanent": "Permanent",
+      "temporary": "Fixed-term",
+      "expired": "Expired",
+      "ageGroup": "Age Group",
+      "tenureGroup": "Tenure Group",
+      "required": "* Required field"
+    }
+  },
+  "noResults": "No employees found",
+  "tryChangingFilters": "Try changing your search or filter criteria.",
+  "demographics": {
+    "title": "Demographic Analysis",
+    "subtitle": "Analysis of employee demographics for {{year}}",
+    "insights": {
+      "title": "Demographic Insights",
+      "genderBalance": "The demographic analysis for {{year}} reveals a workforce predominantly composed of male employees ({{percentage}}% of the total workforce).",
+      "ageDistribution": "The age distribution indicates that the majority of employees are in the {{ageGroup}} age range, suggesting a {{workforce}} workforce.",
+      "genderImbalance": "There {{severity}} gender imbalances across age groups, with female representation being particularly {{level}}.",
+      "young": "relatively young",
+      "mature": "mature",
+      "exists": "are significant",
+      "are": "are some",
+      "significant": "significant gender imbalances",
+      "some": "some gender imbalances",
+      "low": "low",
+      "moderate": "moderate"
+    }
+  },
+  "tenure": {
+    "title": "Tenure Analysis",
+    "subtitle": "Analysis of employee tenure and seniority for {{year}}",
+    "metrics": {
+      "averageTenure": "Average Tenure",
+      "averageTenureDesc": "Average time employees have been with the company",
+      "newEmployees": "New Employees",
+      "newEmployeesDesc": "Employees with less than 5 years of tenure",
+      "longTermEmployees": "Long-term Employees",
+      "longTermEmployeesDesc": "Employees with more than 10 years of tenure"
+    },
+    "insights": {
+      "title": "Tenure Insights",
+      "overview": "The tenure analysis for {{year}} shows an average tenure of {{avgTenure}} years across all employees.",
+      "distribution": "{{newPercentage}}% of employees have been with the company for less than 5 years, while {{longTermPercentage}}% have been with the company for more than 10 years.",
+      "commonRange": "The most common tenure range is {{range}}, representing {{count}} employees ({{percentage}}% of the workforce).",
+      "stability": {
+        "high": "This suggests a stable workforce with high retention rates.",
+        "balanced": "This suggests a balanced mix of experienced and newer employees.",
+        "low": "This suggests a relatively new workforce or potential retention challenges."
+      }
+    }
+  },
+  "organization": {
+    "title": "Organizational Structure",
+    "subtitle": "Analysis of employee positions and organizational structure for {{year}}",
+    "metrics": {
+      "totalPositions": "Total Positions",
+      "totalPositionsDesc": "Unique job positions",
+      "managementStaff": "Management Staff",
+      "managementStaffDesc": "Employees in management roles",
+      "operationsStaff": "Operations Staff",
+      "operationsStaffDesc": "Employees in operations roles",
+      "staffToManagement": "Staff-to-Management",
+      "staffToManagementDesc": "Ratio of staff to management"
+    },
+    "departments": {
+      "management": "Management",
+      "operations": "Operations",
+      "support": "Support"
+    },
+    "charts": {
+      "positionDistribution": "Position Distribution",
+      "departmentDistribution": "Department Distribution",
+      "topPositions": "Top Positions by Headcount"
+    },
+    "table": {
+      "position": "Position",
+      "count": "Count",
+      "percentage": "Percentage"
+    }
+  },
+  "recruitment": {
+    "title": "Recruitment Analysis",
+    "subtitle": "Analysis of hiring patterns and recruitment metrics for {{year}}",
+    "metrics": {
+      "newHires": "New Hires",
+      "newHiresDesc": "Employees hired in {{year}}",
+      "renewalRate": "Renewal Rate",
+      "renewalRateDesc": "New hires as % of total workforce",
+      "positionsFilled": "Positions Filled",
+      "positionsFilledDesc": "Different positions hired for"
+    },
+    "charts": {
+      "hiringTrend": "Hiring Trend",
+      "hiringByPosition": "Hiring by Position"
+    },
+    "insights": {
+      "title": "Recruitment Insights",
+      "overview": "In {{year}}, the organization hired {{newHires}} new employees, representing a {{renewalRate}}% renewal rate of the workforce.",
+      "topPosition": "The most actively recruited position was {{position}}, with {{count}} new hires.",
+      "diversity": "Recruitment was spread across {{count}} different positions, indicating {{strategy}}.",
+      "diverseStrategy": "a diverse hiring strategy",
+      "focusedStrategy": "a focused hiring approach",
+      "noHires": "There were no new hires recorded for {{year}}.",
+      "trendIncrease": "Hiring increased compared to the previous year ({{previousCount}} hires).",
+      "trendDecrease": "Hiring decreased compared to the previous year ({{previousCount}} hires).",
+      "trendStable": "Hiring remained stable compared to the previous year ({{previousCount}} hires)."
+    }
+  },
+  "comparison": {
+    "title": "Year-over-Year Comparison",
+    "subtitle": "Comparison of key metrics across years (2023-2025)",
+    "metrics": {
+      "headcountChange": "Headcount Change",
+      "avgAgeChange": "Average Age Change",
+      "avgTenureChange": "Average Tenure Change",
+      "fromTo": "From {{from}} to {{to}}"
+    },
+    "charts": {
+      "headcountTrend": "Headcount Trend",
+      "ageAndTenureTrend": "Age and Tenure Trend",
+      "newHiresByYear": "New Hires by Year",
+      "genderDistributionByYear": "Gender Distribution by Year",
+      "contractTypesByYear": "Contract Types by Year",
+      "totalEmployees": "Total Employees",
+      "averageAge": "Average Age",
+      "averageTenure": "Average Tenure",
+      "newHires": "New Hires",
+      "male": "Male",
+      "female": "Female",
+      "permanent": "Permanent",
+      "temporary": "Fixed-term",
+      "expired": "Expired"
+    },
+    "insights": {
+      "title": "Year-over-Year Insights",
+      "headcountChange": "From {{startYear}} to {{endYear}}, the organization's headcount {{trend}} by {{percentage}}%.",
+      "increased": "increased",
+      "decreased": "decreased",
+      "stable": "remained stable",
+      "ageAndTenure": "The average age of employees has {{ageTrend}}, while the average tenure has {{tenureTrend}}.",
+      "hiringPatterns": "Hiring patterns show that {{hiringTrend}}.",
+      "recruitmentIncreased": "recruitment has increased over the years",
+      "recruitmentDecreased": "recruitment has decreased over the years",
+      "recruitmentStable": "recruitment has remained relatively stable",
+      "genderDistribution": "The gender distribution {{genderTrend}}.",
+      "shiftedFemale": "has shifted towards more female representation",
+      "shiftedMale": "has shifted towards more male representation",
+      "remainedStable": "has remained relatively stable"
+    }
+  },
+  "risks": {
+    "title": "Risk Analysis",
+    "subtitle": "Identification of HR risks and opportunities for {{year}}",
+    "metrics": {
+      "totalDepartures": "Total Departures",
+      "retirementRisk": "Retirement Risk",
+      "criticalPositions": "Critical Positions",
+      "immediateNeeds": "Immediate Needs"
+    },
+    "charts": {
+      "departureAnalysis": "Departure Analysis",
+      "retirementRisk": "Retirement Risk",
+      "criticalPositions": "Critical Positions",
+      "recruitmentNeeds": "Recruitment Needs"
+    },
+    "insights": {
+      "title": "Risk Insights",
+      "overview": "The risk analysis for {{year}} identifies {{criticalCount}} high-risk positions requiring immediate attention.",
+      "retirementRisk": "{{count}} employees are near retirement, representing {{percentage}}% of the total workforce.",
+      "criticalPositions": "The most critical positions are {{positions}}, primarily due to {{reasons}}.",
+      "recruitmentNeeds": "Immediate recruitment needs have been identified for {{positions}}, with {{count}} positions to fill."
+    },
+    "recommendations": {
+      "title": "Strategic Recommendations",
+      "immediate": "Immediate Actions",
+      "shortTerm": "Short Term",
+      "mediumTerm": "Medium Term",
+      "longTerm": "Long Term"
+    }
+  },
+  "contracts": {
+    "permanent": "Permanent",
+    "temporary": "Fixed-term",
+    "expired": "Expired",
+    "active": "Active",
+    "expiringSoon": "Expiring Soon",
+    "all": "All",
+    "endDate": "End Date",
+    "status": "Status",
+    "daysRemaining": "{{days}} days remaining"
+  },
+  "language": {
+    "select": "Language"
+  }
+}

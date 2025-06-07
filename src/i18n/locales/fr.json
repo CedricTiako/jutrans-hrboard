@@ -1,0 +1,344 @@
+{
+  "common": {
+    "loading": "Chargement des données...",
+    "error": "Erreur de chargement",
+    "retry": "Réessayer",
+    "export": "Exporter",
+    "refresh": "Actualiser",
+    "year": "Année",
+    "total": "Total",
+    "average": "Moyenne",
+    "percentage": "Pourcentage",
+    "employees": "employés",
+    "employee": "employé",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "create": "Créer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "view": "Voir",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "actions": "Actions",
+    "confirm": "Confirmer",
+    "success": "Succès",
+    "warning": "Attention",
+    "error": "Erreur",
+    "yes": "Oui",
+    "no": "Non"
+  },
+  "gender": {
+    "male": "Homme",
+    "female": "Femme"
+  },
+  "navigation": {
+    "dashboard": "Tableau de Bord",
+    "employees": "Liste des Employés",
+    "demographics": "Démographie",
+    "tenure": "Ancienneté",
+    "organization": "Organisation",
+    "recruitment": "Recrutement",
+    "comparison": "Comparaison Annuelle",
+    "risks": "Analyse des Risques"
+  },
+  "dashboard": {
+    "title": "Tableau de Bord RH",
+    "subtitle": "Données pour l'année {{year}}",
+    "kpis": {
+      "totalEmployees": "Effectif Total",
+      "totalEmployeesDesc": "Nombre total d'employés",
+      "avgAge": "Âge Moyen",
+      "avgAgeDesc": "Âge moyen des employés",
+      "avgTenure": "Ancienneté Moyenne",
+      "avgTenureDesc": "Ancienneté moyenne",
+      "newHires": "Nouvelles Embauches",
+      "newHiresDesc": "Nouvelles embauches cette année",
+      "nearRetirement": "Préretraite",
+      "nearRetirementDesc": "Employés proches de la retraite",
+      "temporaryContracts": "Contrats CDD",
+      "temporaryContractsDesc": "Nombre de contrats à durée déterminée",
+      "expiredContracts": "Contrats expirés",
+      "expiredContractsDesc": "Contrats CDD arrivés à expiration"
+    },
+    "charts": {
+      "genderDistribution": "Répartition par Genre",
+      "agePyramid": "Pyramide des Âges",
+      "positionDistribution": "Répartition par Poste",
+      "tenureDistribution": "Répartition par Ancienneté",
+      "contractDistribution": "Répartition par Type de Contrat",
+      "male": "Hommes",
+      "female": "Femmes",
+      "numberOfEmployees": "Nombre d'employés",
+      "ageGroups": "Tranches d'âge (années)",
+      "tenureGroups": "Tranches d'ancienneté (années)",
+      "topPositions": "{{count}} sur {{total}} postes affichés",
+      "showingTop": "Affichage des {{count}} postes les plus courants"
+    },
+    "footer": {
+      "lastUpdated": "Données mises à jour le {{date}} à {{time}}",
+      "copyright": "© {{year}} Tableau de Bord RH - Tous droits réservés"
+    }
+  },
+  "employees": {
+    "title": "Gestion des Employés",
+    "subtitle": "Gestion et consultation des employés pour {{year}}",
+    "filters": {
+      "search": "Rechercher...",
+      "gender": "Genre",
+      "ageGroup": "Tranche d'âge",
+      "tenureGroup": "Ancienneté",
+      "position": "Poste",
+      "nationality": "Nationalité",
+      "affectation": "Affectation",
+      "contractType": "Type de contrat",
+      "contractStatus": "Statut du contrat",
+      "clearAll": "Effacer tous les filtres"
+    },
+    "table": {
+      "name": "Nom",
+      "gender": "Genre",
+      "age": "Âge",
+      "tenure": "Ancienneté",
+      "position": "Poste",
+      "nationality": "Nationalité",
+      "affectation": "Affectation",
+      "hireDate": "Date d'embauche",
+      "endDate": "Fin de contrat",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "stats": {
+      "total": "Total",
+      "averageAge": "Âge moyen",
+      "averageTenure": "Ancienneté moyenne",
+      "uniquePositions": "Postes uniques",
+      "permanentContracts": "CDI",
+      "temporaryContracts": "CDD",
+      "expiredContracts": "Contrats expirés"
+    },
+    "crud": {
+      "newEmployee": "Nouvel employé",
+      "editEmployee": "Modifier employé",
+      "viewEmployee": "Détails employé",
+      "deleteEmployee": "Supprimer employé",
+      "deleteConfirmation": "Êtes-vous sûr de vouloir supprimer l'employé {{name}} ?",
+      "deleteWarning": "Cette action est irréversible.",
+      "createSuccess": "Employé créé avec succès",
+      "updateSuccess": "Employé mis à jour avec succès",
+      "deleteSuccess": "Employé supprimé avec succès",
+      "refreshSuccess": "Données actualisées avec succès",
+      "error": "Une erreur est survenue"
+    },
+    "form": {
+      "personalInfo": "Informations Personnelles",
+      "contractInfo": "Informations Contractuelles",
+      "professionalInfo": "Informations Professionnelles",
+      "calculatedInfo": "Informations Calculées",
+      "fullName": "Nom complet",
+      "gender": "Genre",
+      "nationality": "Nationalité",
+      "birthDate": "Date de naissance",
+      "hireDate": "Date d'embauche",
+      "endDate": "Date de fin de contrat",
+      "endDateOptional": "(optionnel - CDI si vide)",
+      "salary": "Salaire",
+      "position": "Poste",
+      "affectation": "Affectation",
+      "contactPerson": "Personne à contacter",
+      "contractType": "Type de contrat",
+      "permanent": "CDI",
+      "temporary": "CDD",
+      "expired": "Expiré",
+      "ageGroup": "Tranche d'âge",
+      "tenureGroup": "Tranche d'ancienneté",
+      "required": "* Champ obligatoire"
+    }
+  },
+  "noResults": "Aucun employé trouvé",
+  "tryChangingFilters": "Essayez de modifier vos critères de recherche ou de filtrage.",
+  "demographics": {
+    "title": "Analyse Démographique",
+    "subtitle": "Analyse de la démographie des employés pour {{year}}",
+    "insights": {
+      "title": "Aperçus Démographiques",
+      "genderBalance": "L'analyse démographique pour {{year}} révèle une main-d'œuvre principalement composée d'employés masculins ({{percentage}}% de l'effectif total).",
+      "ageDistribution": "La répartition par âge indique que la majorité des employés se trouvent dans la tranche d'âge {{ageGroup}}, suggérant une main-d'œuvre {{workforce}}.",
+      "genderImbalance": "Il {{severity}} des déséquilibres entre les sexes dans les groupes d'âge, la représentation féminine étant particulièrement {{level}}.",
+      "young": "relativement jeune",
+      "mature": "mature",
+      "exists": "existe",
+      "are": "y a",
+      "significant": "des déséquilibres significants entre les sexes",
+      "some": "quelques déséquilibres entre les sexes",
+      "low": "faible",
+      "moderate": "modérée"
+    }
+  },
+  "tenure": {
+    "title": "Analyse de l'Ancienneté",
+    "subtitle": "Analyse de l'ancienneté et de la séniorité des employés pour {{year}}",
+    "metrics": {
+      "averageTenure": "Ancienneté Moyenne",
+      "averageTenureDesc": "Temps moyen que les employés ont passé dans l'entreprise",
+      "newEmployees": "Nouveaux Employés",
+      "newEmployeesDesc": "Employés avec moins de 5 ans d'ancienneté",
+      "longTermEmployees": "Employés de Longue Date",
+      "longTermEmployeesDesc": "Employés avec plus de 10 ans d'ancienneté"
+    },
+    "insights": {
+      "title": "Aperçus sur l'Ancienneté",
+      "overview": "L'analyse de l'ancienneté pour {{year}} montre une ancienneté moyenne de {{avgTenure}} ans pour tous les employés.",
+      "distribution": "{{newPercentage}}% des employés sont dans l'entreprise depuis moins de 5 ans, tandis que {{longTermPercentage}}% sont dans l'entreprise depuis plus de 10 ans.",
+      "commonRange": "La tranche d'ancienneté la plus courante est {{range}}, représentant {{count}} employés ({{percentage}}% de l'effectif).",
+      "stability": {
+        "high": "Cela suggère une main-d'œuvre stable avec des taux de rétention élevés.",
+        "balanced": "Cela suggère un mélange équilibré d'employés expérimentés et nouveaux.",
+        "low": "Cela suggère une main-d'œuvre relativement nouvelle ou des défis potentiels de rétention."
+      }
+    }
+  },
+  "organization": {
+    "title": "Structure Organisationnelle",
+    "subtitle": "Analyse des postes des employés et de la structure organisationnelle pour {{year}}",
+    "metrics": {
+      "totalPositions": "Total des Postes",
+      "totalPositionsDesc": "Postes uniques",
+      "managementStaff": "Personnel de Direction",
+      "managementStaffDesc": "Employés dans des rôles de direction",
+      "operationsStaff": "Personnel Opérationnel",
+      "operationsStaffDesc": "Employés dans des rôles opérationnels",
+      "staffToManagement": "Personnel-Direction",
+      "staffToManagementDesc": "Ratio personnel/direction"
+    },
+    "departments": {
+      "management": "Direction",
+      "operations": "Opérations",
+      "support": "Support"
+    },
+    "charts": {
+      "positionDistribution": "Répartition par Poste",
+      "departmentDistribution": "Répartition par Département",
+      "topPositions": "Top des Postes par Effectif"
+    },
+    "table": {
+      "position": "Poste",
+      "count": "Nombre",
+      "percentage": "Pourcentage"
+    }
+  },
+  "recruitment": {
+    "title": "Analyse du Recrutement",
+    "subtitle": "Analyse des modèles d'embauche et des métriques de recrutement pour {{year}}",
+    "metrics": {
+      "newHires": "Nouvelles Embauches",
+      "newHiresDesc": "Employés embauchés en {{year}}",
+      "renewalRate": "Taux de Renouvellement",
+      "renewalRateDesc": "Nouvelles embauches en % de l'effectif total",
+      "positionsFilled": "Postes Pourvus",
+      "positionsFilledDesc": "Différents postes pour lesquels des embauches ont eu lieu"
+    },
+    "charts": {
+      "hiringTrend": "Tendance des Embauches",
+      "hiringByPosition": "Embauches par Poste"
+    },
+    "insights": {
+      "title": "Aperçus sur le Recrutement",
+      "overview": "En {{year}}, l'organisation a embauché {{newHires}} nouveaux employés, représentant un taux de renouvellement de {{renewalRate}}% de l'effectif.",
+      "topPosition": "Le poste le plus activement recruté était {{position}}, avec {{count}} nouvelles embauches.",
+      "diversity": "Le recrutement s'est étalé sur {{count}} postes différents, indiquant {{strategy}}.",
+      "diverseStrategy": "une stratégie d'embauche diversifiée",
+      "focusedStrategy": "une approche d'embauche ciblée",
+      "noHires": "Aucune nouvelle embauche n'a été enregistrée pour {{year}}.",
+      "trendIncrease": "Les embauches ont augmenté par rapport à l'année précédente ({{previousCount}} embauches).",
+      "trendDecrease": "Les embauches ont diminué par rapport à l'année précédente ({{previousCount}} embauches).",
+      "trendStable": "Les embauches sont restées stables par rapport à l'année précédente ({{previousCount}} embauches)."
+    }
+  },
+  "comparison": {
+    "title": "Comparaison Annuelle",
+    "subtitle": "Comparaison des métriques clés entre les années (2023-2025)",
+    "metrics": {
+      "headcountChange": "Changement d'Effectif",
+      "avgAgeChange": "Changement d'Âge Moyen",
+      "avgTenureChange": "Changement d'Ancienneté Moyenne",
+      "fromTo": "De {{from}} à {{to}}"
+    },
+    "charts": {
+      "headcountTrend": "Tendance de l'Effectif",
+      "ageAndTenureTrend": "Tendance Âge et Ancienneté",
+      "newHiresByYear": "Nouvelles Embauches par Année",
+      "genderDistributionByYear": "Répartition par Genre par Année",
+      "contractTypesByYear": "Types de Contrats par Année",
+      "totalEmployees": "Total des Employés",
+      "averageAge": "Âge Moyen",
+      "averageTenure": "Ancienneté Moyenne",
+      "newHires": "Nouvelles Embauches",
+      "male": "Hommes",
+      "female": "Femmes",
+      "permanent": "CDI",
+      "temporary": "CDD",
+      "expired": "Expirés"
+    },
+    "insights": {
+      "title": "Aperçus Annuels",
+      "headcountChange": "De {{startYear}} à {{endYear}}, l'effectif de l'organisation a {{trend}} de {{percentage}}%.",
+      "increased": "augmenté",
+      "decreased": "diminué",
+      "stable": "resté stable",
+      "ageAndTenure": "L'âge moyen des employés a {{ageTrend}}, tandis que l'ancienneté moyenne a {{tenureTrend}}.",
+      "hiringPatterns": "Les modèles d'embauche montrent que {{hiringTrend}}.",
+      "recruitmentIncreased": "le recrutement a augmenté au fil des années",
+      "recruitmentDecreased": "le recrutement a diminué au fil des années",
+      "recruitmentStable": "le recrutement est resté relativement stable",
+      "genderDistribution": "La répartition par genre {{genderTrend}}.",
+      "shiftedFemale": "s'est orientée vers plus de représentation féminine",
+      "shiftedMale": "s'est orientée vers plus de représentation masculine",
+      "remainedStable": "est restée relativement stable"
+    }
+  },
+  "risks": {
+    "title": "Analyse des Risques",
+    "subtitle": "Identification des risques RH et opportunités pour {{year}}",
+    "metrics": {
+      "totalDepartures": "Départs totaux",
+      "retirementRisk": "Risque retraite",
+      "criticalPositions": "Postes critiques",
+      "immediateNeeds": "Besoins immédiats"
+    },
+    "charts": {
+      "departureAnalysis": "Analyse des Départs",
+      "retirementRisk": "Risque de Départ en Retraite",
+      "criticalPositions": "Postes Critiques",
+      "recruitmentNeeds": "Besoins de Recrutement"
+    },
+    "insights": {
+      "title": "Aperçus des Risques",
+      "overview": "L'analyse des risques pour {{year}} identifie {{criticalCount}} postes à risque élevé nécessitant une attention immédiate.",
+      "retirementRisk": "{{count}} employés sont proches de la retraite, représentant {{percentage}}% de l'effectif total.",
+      "criticalPositions": "Les postes les plus critiques sont {{positions}}, principalement en raison de {{reasons}}.",
+      "recruitmentNeeds": "Des besoins de recrutement immédiats ont été identifiés pour {{positions}}, avec {{count}} postes à pourvoir."
+    },
+    "recommendations": {
+      "title": "Recommandations Stratégiques",
+      "immediate": "Actions Immédiates",
+      "shortTerm": "Court Terme",
+      "mediumTerm": "Moyen Terme",
+      "longTerm": "Long Terme"
+    }
+  },
+  "contracts": {
+    "permanent": "CDI",
+    "temporary": "CDD",
+    "expired": "Expiré",
+    "active": "Actif",
+    "expiringSoon": "Expiration proche",
+    "all": "Tous",
+    "endDate": "Date de fin",
+    "status": "Statut",
+    "daysRemaining": "{{days}} jours restants"
+  },
+  "language": {
+    "select": "Langue"
+  }
+}

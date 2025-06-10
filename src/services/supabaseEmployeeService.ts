@@ -111,7 +111,7 @@ export class SupabaseEmployeeService {
   }
 
   /**
-   * ✅ CRÉER UN NOUVEL EMPLOYÉ
+   * ✅ CRÉER UN NOUVEL EMPLOYÉ POUR TOUTES LES ANNÉES JUSQU'À MAINTENANT
    */
   static async createEmployee(formData: EmployeeFormData, year: number): Promise<{ success: boolean; employee?: Employee; errors?: EmployeeValidationErrors }> {
     try {
@@ -125,43 +125,66 @@ export class SupabaseEmployeeService {
       const birthDate = new Date(formData.DATE_NAISSANCE);
       const hireDate = new Date(formData.DATE_EMBAUCHE);
       const currentDate = new Date();
+      const currentYear = currentDate.getFullYear();
+      const hireYear = hireDate.getFullYear();
 
-      const age = currentDate.getFullYear() - birthDate.getFullYear();
-      const anciennete = currentDate.getFullYear() - hireDate.getFullYear();
+      // Vérifier si l'année d'embauche est dans le futur
+      if (hireYear > currentYear) {
+        return { success: false, errors: { DATE_EMBAUCHE: 'La date d\'embauche ne peut pas être dans le futur' } };
+      }
 
-      // Préparation des données pour Supabase
-      const employeeData = {
-        noms: formData.NOMS.trim(),
-        sexe: formData.SEXE,
-        nationalite: formData.NATIONALITE.trim(),
-        date_naissance: formData.DATE_NAISSANCE,
-        date_embauche: formData.DATE_EMBAUCHE,
-        date_fin_contrat: formData.DATE_FIN_CONTRAT || null,
-        annee_naissance: birthDate.getFullYear(),
-        annee_embauche: hireDate.getFullYear(),
-        age: age,
-        anciennete: anciennete,
-        tranche_age: this.calculateAgeGroup(age),
-        tranche_anciennete: this.calculateTenureGroup(anciennete),
-        poste: formData.POSTE.trim(),
-        personne_contacter: formData.PERSONNE_CONTACTER.trim(),
-        affectation: formData.AFFECTATION.trim(),
-        salaire: formData.SALAIRE.trim(),
-        year: year
-      };
+      // Préparer les données pour chaque année
+      const employeeDataList = [];
+      
+      for (let yearToAdd = hireYear; yearToAdd <= currentYear; yearToAdd++) {
+        const age = yearToAdd - birthDate.getFullYear();
+        const anciennete = yearToAdd - hireYear;
+        
+        // Ne pas créer d'entrée si l'employé n'était pas encore embauché ou si l'âge est invalide
+        if (age < 16 || age > 80) continue;
+        
+        const employeeData = {
+          noms: formData.NOMS.trim(),
+          sexe: formData.SEXE,
+          nationalite: formData.NATIONALITE.trim(),
+          date_naissance: formData.DATE_NAISSANCE,
+          date_embauche: formData.DATE_EMBAUCHE,
+          date_fin_contrat: formData.DATE_FIN_CONTRAT || null,
+          annee_naissance: birthDate.getFullYear(),
+          annee_embauche: hireYear,
+          age: age,
+          anciennete: anciennete,
+          tranche_age: this.calculateAgeGroup(age),
+          tranche_anciennete: this.calculateTenureGroup(anciennete),
+          poste: formData.POSTE.trim(),
+          personne_contacter: formData.PERSONNE_CONTACTER.trim(),
+          affectation: formData.AFFECTATION.trim(),
+          salaire: formData.SALAIRE.trim(),
+          year: yearToAdd
+        };
+        
+        employeeDataList.push(employeeData);
+      }
 
+      if (employeeDataList.length === 0) {
+        return { success: false, errors: { NOMS: 'Aucune année valide pour créer l\'employé' } };
+      }
+
+      // Insérer toutes les entrées en une seule requête
       const { data, error } = await supabase
         .from('employees')
-        .insert([employeeData])
+        .insert(employeeDataList)
         .select()
-        .single();
+        .order('year', { ascending: true });
 
       if (error) {
         console.error('Erreur Supabase création:', error);
         return { success: false, errors: { NOMS: `Erreur lors de la création: ${error.message}` } };
       }
 
-      return { success: true, employee: this.fromSupabaseFormat(data) };
+      // Retourner l'entrée de l'année demandée ou la dernière créée
+      const employeeForRequestedYear = data.find(emp => emp.year === year) || data[data.length - 1];
+      return { success: true, employee: this.fromSupabaseFormat(employeeForRequestedYear) };
     } catch (error) {
       console.error('Erreur createEmployee:', error);
       return { success: false, errors: { NOMS: 'Erreur lors de la création de l\'employé' } };

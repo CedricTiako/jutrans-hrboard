@@ -1,14 +1,30 @@
 import { createClient } from '@supabase/supabase-js';
 
-// Try to get environment variables with fallbacks for development
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://placeholder-url.supabase.co';
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'placeholder-key';
+// Get environment variables
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
-// Check if we're in development mode and provide a mock client
-const isDevelopment = import.meta.env.DEV;
+// Validate that required environment variables are present
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error(
+    '❌ Configuration Supabase manquante!\n\n' +
+    'Veuillez configurer vos variables d\'environnement Supabase:\n' +
+    '1. Créez un fichier .env à la racine du projet\n' +
+    '2. Ajoutez vos identifiants Supabase:\n' +
+    '   VITE_SUPABASE_URL=https://votre-projet.supabase.co\n' +
+    '   VITE_SUPABASE_ANON_KEY=votre-clé-anonyme\n' +
+    '3. Redémarrez le serveur de développement\n\n' +
+    'Vous pouvez trouver ces identifiants dans votre tableau de bord Supabase > Paramètres > API'
+  );
+}
 
-if (isDevelopment && (!supabaseUrl || supabaseUrl === 'https://placeholder-url.supabase.co' || !supabaseAnonKey || supabaseAnonKey === 'placeholder-key')) {
-  console.warn('⚠️ Using placeholder Supabase credentials. Please set up your .env file with valid Supabase credentials.');
+// Validate URL format
+if (!supabaseUrl.startsWith('https://') || !supabaseUrl.includes('.supabase.co')) {
+  throw new Error(
+    '❌ URL Supabase invalide!\n\n' +
+    'L\'URL doit être au format: https://votre-projet.supabase.co\n' +
+    'URL actuelle: ' + supabaseUrl
+  );
 }
 
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
